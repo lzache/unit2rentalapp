@@ -137,7 +137,6 @@ const Home = Vue.component('Home', {
         tenmonthsList: function () {
             return this.shoppingList.filter(function (item) {
                 return !item.done && item.category === 'TenMonths';
-
             });
         },
         tenMonthsRemaining: function () {
@@ -305,7 +304,8 @@ const Home = Vue.component('Home', {
         },
         doneList: function () {
             return this.shoppingList.filter(function (item) {
-                return item.done;
+                item.done=false;
+                return item;
             });
         },
         // totalBoquets: function () {
@@ -428,35 +428,7 @@ const Home = Vue.component('Home', {
         
         <h3>Total Bouquets {{totalBoquets}} 💐 </h3><br>
         
-<!--      <v-card class="progress">-->
-<!--         <v-card class="progress-bar" role="progressbar" v-bind:style="{width: 75%}" aria-valuenow="25" -->
-<!--        aria-valuemin="0" aria-valuemax="100"></v-card>-->
-<!--        </v-card>-->
 
-<br>
-
-<!-- <leaderboard :auth-user="authUser"></leaderboard>-->
-
-<!--<div id="timer" class="timer">-->
-<!--&lt;!&ndash;  Timer Component  &ndash;&gt;-->
-<!--  <Timer -->
-<!--         starttime="Nov 5, 2018 15:37:25" -->
-<!--         endtime="Nov 8, 2020 16:37:25" -->
-<!--         trans='{  -->
-<!--         "day":"Day",-->
-<!--         "hours":"Hours",-->
-<!--         "minutes":"Minutes",-->
-<!--         "seconds":"Seconds",-->
-<!--         "status": {-->
-<!--            "expired":"Expired",-->
-<!--            "running":"Running",-->
-<!--            "upcoming":"Future"-->
-<!--           }}'-->
-<!--         ></Timer>-->
-<!--&lt;!&ndash;  End! Timer Component  &ndash;&gt;-->
-<!--</div>-->
- 
-        
         
 
         <!-- Checklist/ ACCORDION -->
