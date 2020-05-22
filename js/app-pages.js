@@ -136,8 +136,13 @@ const Home = Vue.component('Home', {
     computed: {
         tenmonthsList: function () {
             return this.shoppingList.filter(function (item) {
-                return !item.done && item.category === 'TenMonths'
-
+                if (!item.done && item.category === 'TenMonths')
+                {
+                    return true;
+                }
+                else {
+                    return false;
+                }
             });
         },
         tenMonthsRemaining: function () {
