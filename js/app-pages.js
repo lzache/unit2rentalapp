@@ -136,7 +136,8 @@ const Home = Vue.component('Home', {
     computed: {
         tenmonthsList: function () {
             return this.shoppingList.filter(function (item) {
-                return !item.done && item.category === 'TenMonths';
+                return !item.done && item.category === 'TenMonths'
+
             });
         },
         tenMonthsRemaining: function () {
@@ -304,8 +305,7 @@ const Home = Vue.component('Home', {
         },
         doneList: function () {
             return this.shoppingList.filter(function (item) {
-                item.done=false;
-                return item;
+                return item.done;
             });
         },
         // totalBoquets: function () {
@@ -442,7 +442,7 @@ const Home = Vue.component('Home', {
                             <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
                                     aria-expanded="true" aria-controls="collapseOne">
                                 10 - 12 Months Out 
-                               ({{tenMonthsRemaining}} / {{tenMonthsCount}} completed)
+                               ({{tenMonthsRemaining}} / {{tenMonthsCount}} to go)
                             </button>
                         </h2>
                     </div>
@@ -461,7 +461,7 @@ const Home = Vue.component('Home', {
                             <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
                                     data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                 6 - 9 Months Out 
-                                ({{sixMonthsRemaining}} / {{sixMonthsCount}} completed)
+                                ({{sixMonthsRemaining}} / {{sixMonthsCount}} to go)
                             </button>
                         </h2>
                     </div>
@@ -480,7 +480,7 @@ const Home = Vue.component('Home', {
                             <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
                                     data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                                 3 - 5 Months Out
-                                ({{threeMonthsRemaining}} / {{threeMonthsCount}} completed)
+                                ({{threeMonthsRemaining}} / {{threeMonthsCount}} to go)
                             </button>
                         </h2>
                     </div>
@@ -502,7 +502,7 @@ const Home = Vue.component('Home', {
                                     data-target="#collapseFour"
                                     aria-expanded="true" aria-controls="collapseFour">
                                 6 - 8 Weeks Out
-                                ({{sixMonthsRemaining}} / {{sixMonthsCount}} completed)
+                                ({{sixMonthsRemaining}} / {{sixMonthsCount}} to go)
                             </button>
                         </h2>
                     </div>
@@ -522,7 +522,7 @@ const Home = Vue.component('Home', {
                                     data-target="#collapseFive"
                                     aria-expanded="true" aria-controls="collapseFive">
                                 3 - 5 Weeks Out
-                                ({{threeWeeksRemaining}} / {{threeWeeksCount}} completed)
+                                ({{threeWeeksRemaining}} / {{threeWeeksCount}} to go)
                             </button>
                         </h2>
                     </div>
@@ -543,7 +543,7 @@ const Home = Vue.component('Home', {
                                     data-target="#collapseSix"
                                     aria-expanded="true" aria-controls="collapseSix">
                                 1 - 2 Weeks Out
-                                ({{twoWeeksRemaining}} / {{twoWeeksCount}} completed)
+                                ({{twoWeeksRemaining}} / {{twoWeeksCount}} to go)
                             </button>
                         </h2>
                     </div>
