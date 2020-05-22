@@ -414,6 +414,15 @@ const Home = Vue.component('Home', {
 
     },
 
+    // watch: {
+    //     shoppingList: {
+    //         handler: function(newList){
+    //             localStorage.setItem('shoppingList', JSON.stringify(newList));
+    //         },
+    //         deep: true
+    //     }
+    // },
+
     template: `
         <div class="appPage">
         <br><br>
@@ -507,7 +516,7 @@ const Home = Vue.component('Home', {
                                     data-target="#collapseFour"
                                     aria-expanded="true" aria-controls="collapseFour">
                                 6 - 8 Weeks Out
-                                ({{sixMonthsRemaining}} / {{sixMonthsCount}} to go)
+                                ({{sixWeeksRemaining}} / {{sixWeeksCount}} to go)
                             </button>
                         </h2>
                     </div>

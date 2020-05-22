@@ -14,10 +14,9 @@ Vue.component('list', {
 
     template: '<div class="card-body">\n' +
         '                <ul class="list-group list-group-flush">\n' +
-        '                    <li v-for="(item, i) in items" class="list-group-item">\n' +
-        '                        <div v-if="item.items" >{{item.name}}</div>' +
-        '                        <div v-else class="custom-control custom-checkbox">\n' +
-        '                            <input type="checkbox" :id="`${name}-${i}`" ' +
+        '                    <li v-for="(item, i) in items" class="list-group-item" :key="item">\n' +
+        '                        <div class="custom-control custom-checkbox">\n' +
+        '                            <input type="checkbox" :id="`${name}-${i}`" :value="`${done}-${i}`" ' +
         '                                   v-model="item.done" class="custom-control-input">\n' +
         '                            <label :for="`${name}-${i}`" class="custom-control-label">{{item.name}}</label>\n' +
         '                            <br><p>{{item.bouquet}} bouquets 💐</p>\n' +

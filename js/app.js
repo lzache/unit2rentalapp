@@ -64,12 +64,4 @@ var app = new Vue({
         // }
     },
 
-    watch: {
-        // shoppingList: {
-        //     handler: function(newList){
-        //         localStorage.setItem('shoppingList', JSON.stringify(newList));
-        //     },
-        //     deep: true
-        // }
-    }
 });
