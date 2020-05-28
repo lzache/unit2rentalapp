@@ -9513,7 +9513,7 @@ h3 {
 }
 body {
   font-family: "Hind", sans-serif;
-  background-color: #e9ecef;
+
 }
 
 nav, .btn, h1, h2, h3, h4, h5, h6, .it {
@@ -9524,20 +9524,7 @@ nav, .btn, h1, h2, h3, h4, h5, h6, .it {
   color: #be222d;
 }
 
-.btn.btn-tiny {
-  padding: 0;
-  border-radius: 50%;
-  width: 1.2em;
-  height: 1.2em;
-  line-height: 0.1em;
-  font-size: 1.2em;
-  font-family: "Helvetica", sans-serif;
-  color: #495057;
-}
-.btn.btn-tiny:focus, .btn.btn-tiny:active:focus {
-  outline: none;
-  box-shadow: none;
-}
+
 
 .btn i {
   margin-right: 0.5em;
@@ -9553,35 +9540,8 @@ nav, .btn, h1, h2, h3, h4, h5, h6, .it {
   color: #be222d;
 }
 
-.get-it-img {
-  width: 100%;
-  max-width: 1000px;
-}
 
-.get-it-lists {
-  border-left: 1px solid #495057;
-  border-right: 1px solid #495057;
-}
-.get-it-lists > div {
-  border-left: 1px solid #495057;
-  border-right: 1px solid #495057;
-}
 
-.get-it-list {
-  padding-bottom: 2rem;
-}
-.get-it-list h3 {
-  color: #be222d;
-  background-color: #343a40;
-  padding: 0.5rem 1rem;
-  margin: 0;
-}
-.get-it-list ul, .get-it-list p {
-  margin: 0 0.5rem;
-}
-.get-it-list .list-group .list-group-item:first-child {
-  border-top: none;
-}
 
 .slogan {
   margin-bottom: 10px;
@@ -9633,8 +9593,9 @@ footer p {
 }
 
 .accordion .card {
-  width: 800px;
+  width: 500px;
   margin: 0 auto;
+  box-shadow: 8px 8px 8px grey;
 }
 
 ul li {
@@ -9645,5 +9606,18 @@ ul li {
   width: 65px;
   border-radius: 50%;
 }
+
+h3 {
+  padding-left: 100px;
+}
+
+#app {
+  background: #e9ecef;
+  }
+
+.card {
+  box-shadow: 8px 8px 8px grey;
+}
+
 
 /*# sourceMappingURL=app.css.map */

@@ -1,15 +1,22 @@
 // Models
+
 var User = function(firebaseUser){
     let m = {
-        displayName: '',
+        bouquets: '',
         email: '',
+        name: '',
         photoURL: '',
         uid: '',
+        contacts: '',
+        shoppingList: '',
     }
 
     if(firebaseUser){
-        m.displayName = firebaseUser.displayName ? firebaseUser.displayName : '';
+        m.bouquets = firebaseUser.bouquets ? firebaseUser.bouquets : '';
         m.email = firebaseUser.email ? firebaseUser.email : '';
+        m.name = firebaseUser.name ? firebaseUser.name : '';
+        m.contacts = firebaseUser.contacts ? firebaseUser.contacts : '';
+        m.shoppingList = firebaseUser.shoppingList ? firebaseUser.shoppingList : '';
         m.photoURL = firebaseUser.photoURL ? firebaseUser.photoURL : '';
         m.uid = firebaseUser.uid ? firebaseUser.uid : '';
     }
@@ -17,39 +24,10 @@ var User = function(firebaseUser){
     return m;
 }
 
-// var Need = function(){
-//     return {
-//         name: '',
-//         datetime: new Date(),
-//         createdBy: null,
-//         assignedTo: null,
-//     }
-// };
-//
-// var Potluck = function(){
-//     return {
-//         name: '',
-//         datetime: new Date(),
-//         description: '',
-//         location: '',
-//         createdBy: null,
-//         users: []
-//     }
-// };
-//
-// var Guest = function(){
-//     return {
-//         user: null,
-//         datetime: new Date(),
-//     }
-// };
-
-// -----------------------------------------------------
-
 
 
 // Your web app's Firebase configuration
-var firebaseConfig = {
+const firebaseConfig = {
     apiKey: "AIzaSyDpCjAizxxc6qQ1JkCe2MMWqrNjsKX8uNM",
     authDomain: "weddingplanner-f3395.firebaseapp.com",
     databaseURL: "https://weddingplanner-f3395.firebaseio.com",
@@ -62,6 +40,6 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 var db = firebase.firestore();
-var storage = firebase.storage().ref();
+var storage = firebase.storage().ref('users');
 
 

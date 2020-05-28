@@ -427,26 +427,12 @@ const Home = Vue.component('Home', {
         <div class="appPage">
         <br><br>
             <div class="row">
-        <div class="col-1"></div>
         <div class="col-6">
-            <h2>Your Wedding Checklist</h2>
-            <p>Welcome to the Terrace 167 Rental App! This isn't your average app or wedding checklist - here you can catch bouquets one last time!</p>
-            <p>Complete items on the checklist in the timeline given and collect(catch) the bouquet value of them. Some items are worth more 
-            than others! Once you've caught enough bouquets you can redeem them for rewards below!</p>
-           <h5>Stay on track with your wedding planning - <br>
-           catch bouquets, redeem for rewards, celebrate! </h5>
-           </div>
-           <div class="col-5"><img src="https://images.squarespace-cdn.com/content/v1/5c7dad75b10f25bdb570b9e6/1560531676551-HQFJWAABUXRVPHLF2601/ke17ZwdGBToddI8pDm48kGXoD000J7kx3NE7W-LXpdwUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKcSHIBb6yNmvYkAyvF3loIw6LWPhmq3jJqr-f9nvyP7bW--NA7--1aw0mnW_uWXk87/frontbardone.jpg?format=1000w" width="450" height="300" alt=""> </div>
-            
-        </div>
-        
         <h3>Total Bouquets {{totalBoquets}} 💐 </h3><br>
         
 
         
-
-        <!-- Checklist/ ACCORDION -->
-        <div class="customCard justify-content-center">
+            <div class="customCard justify-content-center">
             <div class="accordion" id="accordionExample">
             
             <!-- 10-12 Month Checklist -->
@@ -592,6 +578,26 @@ const Home = Vue.component('Home', {
 
             </div>
         </div>   
+           </div>
+           <div class="col-6">
+           <h2>Your Wedding Checklist</h2>
+            <p>Welcome to the Terrace 167 Rental App! This isn't your average app or wedding checklist - here you can catch bouquets one last time!</p>
+            <p>Complete items on the checklist in the timeline given and collect(catch) the bouquet value of them. Some items are worth more 
+            than others! Once you've caught enough bouquets you can redeem them for rewards below!</p>
+           <h5>Stay on track with your wedding planning - <br>
+           catch bouquets, redeem for rewards, celebrate! </h5><br>
+           <img src="https://images.squarespace-cdn.com/content/v1/5c7dad75b10f25bdb570b9e6/1560531676551-HQFJWAABUXRVPHLF2601/ke17ZwdGBToddI8pDm48kGXoD000J7kx3NE7W-LXpdwUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKcSHIBb6yNmvYkAyvF3loIw6LWPhmq3jJqr-f9nvyP7bW--NA7--1aw0mnW_uWXk87/frontbardone.jpg?format=1000w" width="450" height="300" alt=""> </div>
+           </div> 
+            
+        </div>
+        
+        <h3>Total Bouquets {{totalBoquets}} 💐 </h3><br>
+        
+
+        
+
+        <!-- Checklist/ ACCORDION -->
+        
         </div>  
         </div>
     `,
@@ -640,7 +646,7 @@ const Profile = Vue.component('Profile', {
        <div class="col-1"></div>
        <div class="col-5">
   <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
+    <label for="exampleInputEmail1"></label>
     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
   </div>
@@ -661,78 +667,78 @@ const Profile = Vue.component('Profile', {
     `,
 });
 
-const Vendors = Vue.component('Vendors', {
-    props: {
-        authUser: {required: true},
-    },
-
-    computed: {
-        loggedIn() {
-            return (this.authUser && this.authUser.uid);
-        },
-    },
-
-    template: `
-        <div id="app" class="container-fluid">
-        <h3>Caterers</h3>
-
-        <div class="appPage">
-            <p>Our goal is to ensure that your wedding exceeds your expectations and creates memories that last a
-                lifetime. Terrace 167 has partnered with a top-notch group of experienced and dedicated Caterers in
-                which clients must choose from. </p>
-        </div>
-            <div class="row">
-                <div class="col-sm-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <h4 class="card-title">Saz's Catering </h4>
-                            <p class="card-text">Saz's Catering is a Milwaukee favorite offering many different styles
-                                of serving and cusine </p>
-                            <a href="https://sazs.com/catering/" class="card-link">Read More</a><br>
-                            <input type="radio" aria-label="pick" name="caterer"> <label>Choose Caterer</label>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col-sm-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <h4 class="card-title">Bubb’s Texas BBQ</h4>
-                            <p class="card-text">Ranging from sit-down to buffet they have a wide-variety for every
-                                occassion!</p>
-                            <a href="http://www.bubbs.com/" class="card-link">Read More</a><br>
-                            <input type="radio" aria-label="pick" name="caterer"> <label>Choose Caterer</label>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <h4 class="card-title">Catering Craftmen</h4>
-                            <p class="card-text">Whatever the occasion, we want to make your event as memorable as you
-                                have envisioned it to be.</p>
-                            <a href="http://cateringcraftsmen.com/" class="card-link">Read More</a><br>
-                            <input type="radio" aria-label="pick" name="caterer"> <label>Choose Caterer</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <h4 class="card-title">Prime Minister</h4>
-                            <p class="card-text">From our succulent steaks to our fresh, green salads and our
-                                mouth-watering desserts.</p>
-                            <a href="http://www.pmcatering.com/" class="card-link">Read More</a><br>
-                            <input type="radio" aria-label="pick" name="caterer"> <label>Choose Caterer</label>
-                        </div>
-                    </div>
-                </div>
-        </div>
-    </div>
-    `,
-
-});
+// const Vendors = Vue.component('Vendors', {
+//     props: {
+//         authUser: {required: true},
+//     },
+//
+//     computed: {
+//         loggedIn() {
+//             return (this.authUser && this.authUser.uid);
+//         },
+//     },
+//
+//     template: `
+//         <div id="app" class="container-fluid">
+//         <h3>Caterers</h3>
+//
+//         <div class="appPage">
+//             <p>Our goal is to ensure that your wedding exceeds your expectations and creates memories that last a
+//                 lifetime. Terrace 167 has partnered with a top-notch group of experienced and dedicated Caterers in
+//                 which clients must choose from. </p>
+//         </div>
+//             <div class="row">
+//                 <div class="col-sm-6">
+//                     <div class="card">
+//                         <div class="card-body">
+//                             <h4 class="card-title">Saz's Catering </h4>
+//                             <p class="card-text">Saz's Catering is a Milwaukee favorite offering many different styles
+//                                 of serving and cusine </p>
+//                             <a href="https://sazs.com/catering/" class="card-link">Read More</a><br>
+//                             <input type="radio" aria-label="pick" name="caterer"> <label>Choose Caterer</label>
+//                         </div>
+//                     </div>
+//
+//                 </div>
+//                 <div class="col-sm-6">
+//                     <div class="card">
+//                         <div class="card-body">
+//                             <h4 class="card-title">Bubb’s Texas BBQ</h4>
+//                             <p class="card-text">Ranging from sit-down to buffet they have a wide-variety for every
+//                                 occassion!</p>
+//                             <a href="http://www.bubbs.com/" class="card-link">Read More</a><br>
+//                             <input type="radio" aria-label="pick" name="caterer"> <label>Choose Caterer</label>
+//                         </div>
+//                     </div>
+//                 </div>
+//
+//                 <div class="col-sm-6">
+//                     <div class="card">
+//                         <div class="card-body">
+//                             <h4 class="card-title">Catering Craftmen</h4>
+//                             <p class="card-text">Whatever the occasion, we want to make your event as memorable as you
+//                                 have envisioned it to be.</p>
+//                             <a href="http://cateringcraftsmen.com/" class="card-link">Read More</a><br>
+//                             <input type="radio" aria-label="pick" name="caterer"> <label>Choose Caterer</label>
+//                         </div>
+//                     </div>
+//                 </div>
+//                 <div class="col-sm-6">
+//                     <div class="card">
+//                         <div class="card-body">
+//                             <h4 class="card-title">Prime Minister</h4>
+//                             <p class="card-text">From our succulent steaks to our fresh, green salads and our
+//                                 mouth-watering desserts.</p>
+//                             <a href="http://www.pmcatering.com/" class="card-link">Read More</a><br>
+//                             <input type="radio" aria-label="pick" name="caterer"> <label>Choose Caterer</label>
+//                         </div>
+//                     </div>
+//                 </div>
+//         </div>
+//     </div>
+//     `,
+//
+// });
 
 const Rewards = Vue.component('Rewards', {
     props: {
