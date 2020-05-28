@@ -22,17 +22,19 @@ var app = new Vue({
     },
 
     firestore: {
-      User: db.collection('users'),
+        User: db.collection('users'),
     },
 
     methods: {
-        // addUser(){
-        //     let theUser = this.User;
-        //
-        //     db.collection('users')
-        //         .add(theUser);
+        addUser(){
+            let theUser = this.User;
 
-        // },
+            db.collection('users')
+                .add(theUser)
+                .then(this.id);
+
+
+        },
 
     },
 
@@ -40,7 +42,7 @@ var app = new Vue({
 
     created: function () {
         // took auth from text.html
-        firebase.auth().onAuthStateChanged(function(user) {
+        firebase.auth().onAuthStateChanged(function (user) {
             if (user) {
                 // User is signed in.
                 var bouquets = user.bouquets;
@@ -67,10 +69,10 @@ var app = new Vue({
     },
 
 
-    mounted: function () {
-        // if(localStorage.getItem('shoppingList')){
-        //     this.shoppingList = JSON.parse(localStorage.getItem('shoppingList'));
-        // }
-    },
-
+//     mounted: function () {
+//         // if(localStorage.getItem('shoppingList')){
+//         //     this.shoppingList = JSON.parse(localStorage.getItem('shoppingList'));
+//         // }
+//     },
+//
 });
