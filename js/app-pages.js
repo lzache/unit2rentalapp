@@ -313,6 +313,7 @@ const Home = Vue.component('Home', {
                 return item.done;
             });
         },
+
         // totalBoquets: function () {
         //     this.shoppingList.filter(function (item) {
         //         var total = 0;
@@ -321,13 +322,14 @@ const Home = Vue.component('Home', {
         //     });
         // }
 
-        totalBoquets: function () {
+        userTotalBoquets: function () {
             let total = 0;
-            itemBoquets = 0;
+            let itemBoquets = 0;
             for (let i = 0; i < this.shoppingList.length; i++) {
                 if (this.shoppingList[i].done) {
                     itemBoquets = parseInt(this.shoppingList[i].bouquet);
                     total += itemBoquets;
+
                     // if (this.shoppingList[i].name === 'Copper Bar Package' && this.shoppinList[i].pick1 == false){
                     //     this.shoppingList[i].pick1 = true;
                     //     //this.shoppingList[i+1].done = false;
@@ -411,6 +413,17 @@ const Home = Vue.component('Home', {
             this.shoppingList.splice(this.shoppingList.indexOf(item), 1);
         },
 
+        availableBoquets: function() {
+            let total = 0;
+            let itemBoquetValue = 0;
+            for (let i = 0; i < this.shoppingList.length; i++) {
+                itemBoquetValue = parseInt(this.shoppingList[i].bouquet);
+                total += itemBoquetValue;
+            }
+            return total;
+
+        },
+
 
     },
 
@@ -428,7 +441,7 @@ const Home = Vue.component('Home', {
         <br><br>
             <div class="row">
         <div class="col-6">
-        <h3>Total Bouquets {{totalBoquets}} 💐 </h3><br>
+        <h3>Total Bouquets {{userTotalBoquets}} 💐 </h3><br>
         
 
         
